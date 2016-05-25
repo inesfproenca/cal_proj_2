@@ -1,0 +1,26 @@
+<-Utilizador1_Rua do Freixo>
+<-Utilizador2_Rua Costa Nova>
+<-Utilizador3_Rua do Estoril>
+<-Utilizador4_Rua do Estoril>
+<-Utilizador5_Rua Costa Nova>
+<-Utilizador6_Rua da Aguda>
+<-Utilizador7_Rua do Estoril>
+<-Utilizador8_Rua de Leca>
+<-Utilizador9_Rua das Condominhas>
+<-Utilizador10_Rua do Estoril>
+<-Utilizador11_Rua de Leca>
+<-Utilizador12_Rua da Aguda>
+<-Utilizador13_Rua da Aguda>
+<-Utilizador14_Rua da Aguda>
+<-Utilizador15_Largo  Costa Nova>
+<-Utilizador16_Rua do Progresso>
+<-Utilizador17_Largo Costa Nova>
+<-Utilizador18_Rua Julio Lourenco Pinto>
+<-Utilizador19_Rua de Carvalho Barbosa>
+<-Utilizador20_Rua Julio Lourenco Pinto>
+<-Utilizador21_Rua do Progresso>
+<-Utilizador22_Rua Julio Lourenco Pinto>
+<-Utilizador23_Rua das Condominhas>
+<-Utilizador24_Rua de Carvalho Barbosa>
+<-Utilizador25_Rua Campo Alegre>
+<-Utilizador26_Rua Campo ALegre>
