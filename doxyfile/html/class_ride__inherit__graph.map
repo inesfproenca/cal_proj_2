@@ -1,0 +1,4 @@
+<map id="Ride" name="Ride">
+<area shape="rect" id="node2" href="$class_ride_offer.html" title="RideOffer" alt="" coords="5,80,80,107"/>
+<area shape="rect" id="node3" href="$class_ride_request.html" title="RideRequest" alt="" coords="104,80,200,107"/>
+</map>

@@ -1,0 +1,176 @@
+\hypertarget{class_app}{}\section{App Class Reference}
+\label{class_app}\index{App@{App}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_app_acb8cbf3e285b91d0170ffe87df5989c5}{App} ()
+\item 
+void \hyperlink{class_app_ab996c03e3b8455a98c3ee32684353bf4}{read\+Data} (string filename)
+\item 
+void \hyperlink{class_app_a22ee53e2dc589184357e31a61bbb1bbc}{read\+Data\+Rides} (string filename)
+\item 
+void \hyperlink{class_app_a726ada082015afbaf04b4f2bcc4dbd6d}{add\+User} (string name, string address)
+\item 
+void \hyperlink{class_app_ac03ffaeef9892bec7f6b304c647073c9}{add\+Ride\+Request} (\hyperlink{class_user}{User} $\ast$user, uint departure\+Place, uint arrival\+Place, time\+\_\+t departure\+Time, time\+\_\+t departure\+Tolerance, time\+\_\+t arrival\+Tolerance, int no\+Seats)
+\item 
+void \hyperlink{class_app_a5510b9f90f870dbf3b6c2ab678e63f27}{add\+Ride\+Offer} (\hyperlink{class_user}{User} $\ast$user, uint departure\+Place, uint arrival\+Place, time\+\_\+t departure\+Time, time\+\_\+t departure\+Tolerance, time\+\_\+t arrival\+Tolerance, int no\+Seats)
+\item 
+bool \hyperlink{class_app_ab93229e931835d421b5bb9e2fa241f44}{match\+Rides} (\hyperlink{class_ride_offer}{Ride\+Offer} \&offer, \hyperlink{class_ride_request}{Ride\+Request} \&request)
+\item 
+\hypertarget{class_app_a15ead9be0555e2e208818eb8f4020bfc}{}void {\bfseries try\+To\+Match\+Ride} (\hyperlink{class_ride}{Ride} $\ast$new\+Ride)\label{class_app_a15ead9be0555e2e208818eb8f4020bfc}
+
+\item 
+void \hyperlink{class_app_a587b90a006f1dacc52608259f729ee30}{show\+Users\+Info} ()
+\item 
+vector$<$ \hyperlink{class_user}{User} $\ast$ $>$ \hyperlink{class_app_a389988991bdbe0002c9df1245708c29e}{get\+Users} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_app_acb8cbf3e285b91d0170ffe87df5989c5}{}\index{App@{App}!App@{App}}
+\index{App@{App}!App@{App}}
+\subsubsection[{App()}]{\setlength{\rightskip}{0pt plus 5cm}App\+::\+App (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_app_acb8cbf3e285b91d0170ffe87df5989c5}
+Default constructor for the \hyperlink{class_app}{App} Class 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_app_a5510b9f90f870dbf3b6c2ab678e63f27}{}\index{App@{App}!add\+Ride\+Offer@{add\+Ride\+Offer}}
+\index{add\+Ride\+Offer@{add\+Ride\+Offer}!App@{App}}
+\subsubsection[{add\+Ride\+Offer(\+User $\ast$user, uint departure\+Place, uint arrival\+Place, time\+\_\+t departure\+Time, time\+\_\+t departure\+Tolerance, time\+\_\+t arrival\+Tolerance, int no\+Seats)}]{\setlength{\rightskip}{0pt plus 5cm}void App\+::add\+Ride\+Offer (
+\begin{DoxyParamCaption}
+\item[{{\bf User} $\ast$}]{user, }
+\item[{uint}]{departure\+Place, }
+\item[{uint}]{arrival\+Place, }
+\item[{time\+\_\+t}]{departure\+Time, }
+\item[{time\+\_\+t}]{departure\+Tolerance, }
+\item[{time\+\_\+t}]{arrival\+Tolerance, }
+\item[{int}]{no\+Seats}
+\end{DoxyParamCaption}
+)}\label{class_app_a5510b9f90f870dbf3b6c2ab678e63f27}
+Creates a \hyperlink{class_ride}{Ride} Offer and adds it to the offers vector 
+\begin{DoxyParams}{Parameters}
+{\em user} & ride-\/offering user \\
+\hline
+{\em departure\+Place} & number of the i-\/node of the departure place \\
+\hline
+{\em arrival\+Place} & number of the i-\/node of the arrival place \\
+\hline
+{\em departure\+Time} & date of desired departure \\
+\hline
+{\em departure\+Tolerance} & time tolerance relative to the departure time \\
+\hline
+{\em arrival\+Tolerance} & time tolerance relative to the arrival time \\
+\hline
+{\em no\+Seats} & number of seats requested for the car \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_app_ac03ffaeef9892bec7f6b304c647073c9}{}\index{App@{App}!add\+Ride\+Request@{add\+Ride\+Request}}
+\index{add\+Ride\+Request@{add\+Ride\+Request}!App@{App}}
+\subsubsection[{add\+Ride\+Request(\+User $\ast$user, uint departure\+Place, uint arrival\+Place, time\+\_\+t departure\+Time, time\+\_\+t departure\+Tolerance, time\+\_\+t arrival\+Tolerance, int no\+Seats)}]{\setlength{\rightskip}{0pt plus 5cm}void App\+::add\+Ride\+Request (
+\begin{DoxyParamCaption}
+\item[{{\bf User} $\ast$}]{user, }
+\item[{uint}]{departure\+Place, }
+\item[{uint}]{arrival\+Place, }
+\item[{time\+\_\+t}]{departure\+Time, }
+\item[{time\+\_\+t}]{departure\+Tolerance, }
+\item[{time\+\_\+t}]{arrival\+Tolerance, }
+\item[{int}]{no\+Seats}
+\end{DoxyParamCaption}
+)}\label{class_app_ac03ffaeef9892bec7f6b304c647073c9}
+Creates a \hyperlink{class_ride}{Ride} Request and adds it to the requests vector 
+\begin{DoxyParams}{Parameters}
+{\em user} & ride-\/requesting user \\
+\hline
+{\em departure\+Place} & number of the i-\/node of the departure place \\
+\hline
+{\em arrival\+Place} & number of the i-\/node of the arrival place \\
+\hline
+{\em departure\+Time} & date of desired departure \\
+\hline
+{\em departure\+Tolerance} & time tolerance relative to the departure time \\
+\hline
+{\em arrival\+Tolerance} & time tolerance relative to the arrival time \\
+\hline
+{\em no\+Seats} & number of seats requested for the car \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_app_a726ada082015afbaf04b4f2bcc4dbd6d}{}\index{App@{App}!add\+User@{add\+User}}
+\index{add\+User@{add\+User}!App@{App}}
+\subsubsection[{add\+User(string name, string address)}]{\setlength{\rightskip}{0pt plus 5cm}void App\+::add\+User (
+\begin{DoxyParamCaption}
+\item[{string}]{name, }
+\item[{string}]{address}
+\end{DoxyParamCaption}
+)}\label{class_app_a726ada082015afbaf04b4f2bcc4dbd6d}
+Creates an user with given name and address and adds it to the users vector 
+\begin{DoxyParams}{Parameters}
+{\em name} & user name \\
+\hline
+{\em address} & user address \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_app_a389988991bdbe0002c9df1245708c29e}{}\index{App@{App}!get\+Users@{get\+Users}}
+\index{get\+Users@{get\+Users}!App@{App}}
+\subsubsection[{get\+Users()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf User} $\ast$ $>$ App\+::get\+Users (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_app_a389988991bdbe0002c9df1245708c29e}
+\begin{DoxyReturn}{Returns}
+the users vector 
+\end{DoxyReturn}
+\hypertarget{class_app_ab93229e931835d421b5bb9e2fa241f44}{}\index{App@{App}!match\+Rides@{match\+Rides}}
+\index{match\+Rides@{match\+Rides}!App@{App}}
+\subsubsection[{match\+Rides(\+Ride\+Offer \&offer, Ride\+Request \&request)}]{\setlength{\rightskip}{0pt plus 5cm}bool App\+::match\+Rides (
+\begin{DoxyParamCaption}
+\item[{{\bf Ride\+Offer} \&}]{offer, }
+\item[{{\bf Ride\+Request} \&}]{request}
+\end{DoxyParamCaption}
+)}\label{class_app_ab93229e931835d421b5bb9e2fa241f44}
+Tries to match a ride offer with a ride request (checks if distances and times are valid) 
+\begin{DoxyParams}{Parameters}
+{\em offer} & \hyperlink{class_ride}{Ride} Offer that is being tried to match \\
+\hline
+{\em request} & \hyperlink{class_ride}{Ride} Request that is being tried to match \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_app_ab996c03e3b8455a98c3ee32684353bf4}{}\index{App@{App}!read\+Data@{read\+Data}}
+\index{read\+Data@{read\+Data}!App@{App}}
+\subsubsection[{read\+Data(string filename)}]{\setlength{\rightskip}{0pt plus 5cm}void App\+::read\+Data (
+\begin{DoxyParamCaption}
+\item[{string}]{filename}
+\end{DoxyParamCaption}
+)}\label{class_app_ab996c03e3b8455a98c3ee32684353bf4}
+Reads database data from a file 
+\begin{DoxyParams}{Parameters}
+{\em filename} & name of the data-\/containing file \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_app_a22ee53e2dc589184357e31a61bbb1bbc}{}\index{App@{App}!read\+Data\+Rides@{read\+Data\+Rides}}
+\index{read\+Data\+Rides@{read\+Data\+Rides}!App@{App}}
+\subsubsection[{read\+Data\+Rides(string filename)}]{\setlength{\rightskip}{0pt plus 5cm}void App\+::read\+Data\+Rides (
+\begin{DoxyParamCaption}
+\item[{string}]{filename}
+\end{DoxyParamCaption}
+)}\label{class_app_a22ee53e2dc589184357e31a61bbb1bbc}
+Reads database data from a file 
+\begin{DoxyParams}{Parameters}
+{\em filename} & name of the data-\/containing file \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_app_a587b90a006f1dacc52608259f729ee30}{}\index{App@{App}!show\+Users\+Info@{show\+Users\+Info}}
+\index{show\+Users\+Info@{show\+Users\+Info}!App@{App}}
+\subsubsection[{show\+Users\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void App\+::show\+Users\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_app_a587b90a006f1dacc52608259f729ee30}
+Shows All Users Information 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Inês/workspace/cal\+\_\+proj\+\_\+1/src/App.\+h\item 
+C\+:/\+Users/\+Inês/workspace/cal\+\_\+proj\+\_\+1/src/App.\+cpp\end{DoxyCompactItemize}
