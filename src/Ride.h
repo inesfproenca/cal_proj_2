@@ -91,6 +91,13 @@ public:
     uint getDeparturePlace() const {
         return departurePlace;
     }
+
+    /**
+     * @returns vector of hitchhikers
+     */
+	const vector<User*>& getHitchhikers() const {
+		return hitchhikers;
+	}
 };
 
 #endif /* SRC_RIDE_H_ */

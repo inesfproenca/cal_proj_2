@@ -145,12 +145,8 @@ bool isPossible(RideOffer offer, RideRequest request,list<uint> route, list<doub
         itd++;
     }
 
-    if(((srcTime >(arrivalTime - request.getDepartureTolerance()) && srcTime <(arrivalTime + request.getDepartureTolerance())) &&
-            (destTime - srcTime > request.getEstimatedArrival() - request.getArrivalTolerance()) && (destTime - srcTime < request.getEstimatedArrival() + request.getArrivalTolerance())))
-
     return ((srcTime >(arrivalTime - request.getDepartureTolerance()) && srcTime <(arrivalTime + request.getDepartureTolerance())) &&
             ((destTime - srcTime) > request.getEstimatedArrival() - request.getArrivalTolerance()) && (destTime - srcTime < request.getEstimatedArrival() + request.getArrivalTolerance()));
-
 }
 
 bool App::matchRides(RideOffer &offer, RideRequest &request){

@@ -36,9 +36,11 @@ public:
         this->route = route;
     }
 
-    void addRequest(RideRequest request){
-        requests.push_back(request);
-    }
+    void addRequest(RideRequest request);
+
+    bool findDestinationInPath(string dest);
+
+    bool findPassenger(string name);
 };
 
 #endif /* SRC_RIDEOFFER_H_ */

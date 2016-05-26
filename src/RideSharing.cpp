@@ -4,6 +4,10 @@
 
 using namespace std;
 
+//TODO Pesquisar se o destino de uma pessoa (nome da rua) está incluído no percurso de um dado motorista (sequencia de ruas por ounde vai passar)
+//TODO Procurar uma pessoa específica entre os ocupantes de uma dada viatura
+//TODO Pesquisa dos nomes de ruas e de passageiros deverá ser exata e aproximada
+
 int main(){
 	RoadMap* rm = RoadMap::getInstance();
 	rm->viewMap();
