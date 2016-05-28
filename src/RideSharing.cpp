@@ -20,8 +20,10 @@ int main(){
 	do{
 		cout << "Introduce filename: ";
 		getline(cin, filename);
-		if(filename == "")
+		if(filename == ""){
+			filename = "Database.txt";
 			break;
+		}
 		test.open(filename.c_str());
 		if(!test.is_open())
 			cout << "File doesn't exist!" << endl;
@@ -63,7 +65,7 @@ int main(){
 		case 3:
 			//TODO: SHOW INFO
 			//application.displayAllInfo();
-			application.showUsersInfo();
+			application.showAllInfo();
 			cout<<endl;
 			break;
 		case 2:

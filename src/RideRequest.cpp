@@ -17,3 +17,20 @@ RideRequest::~RideRequest() {
 	// TODO Auto-generated destructor stub
 }
 
+ostream& operator<<(ostream& os, const RideRequest& request){
+
+	struct tm * date = localtime(&request.departureTime);
+
+	os << "Requested by:\n";
+	for (int i = 0; i < request.hitchhikers.size(); ++i) {
+		os << "\t" << request.hitchhikers.at(i)->getName() << endl;
+	}
+
+	os << "From: " << request.departurePlace << endl;
+	os << "To:" << request.arrivalPlace << endl;
+
+	os << "Departure time: " <<asctime(date);
+
+	os << "Number of seats required : " << request.noSeats << endl;
+	return os;
+}

@@ -467,12 +467,6 @@ void RoadMap::visualizePath(list<uint> path){
 	gv->setVertexColor(*it, "red");
 	gv->setVertexLabel(*it, "Destino");
 
-	vector<string> rp = this->getRoadsPassed(path);
-
-	for (int var = 0; var < rp.size(); ++var) {
-		cout << rp[var] << endl;
-	}
-
 	gv->rearrange();
 }
 

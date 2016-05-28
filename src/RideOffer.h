@@ -41,6 +41,8 @@ public:
     bool findDestinationInPath(string dest);
 
     bool findPassenger(string name);
+
+    friend ostream& operator<<(ostream& os, const RideOffer& offer);
 };
 
 #endif /* SRC_RIDEOFFER_H_ */

@@ -6,6 +6,7 @@
  */
 
 #include "RideOffer.h"
+#include <ctime>
 
 RideOffer::RideOffer(uint departurePlace, uint arrivalPlace, time_t departureTime, time_t departureTolerance, time_t arrivalTolerance, int noSeats, User* driver):
 Ride(departurePlace, arrivalPlace, departureTime, departureTolerance, arrivalTolerance, noSeats){
@@ -151,5 +152,33 @@ bool RideOffer::findPassenger(string name){
 		return true;
 
 	return false;
+}
+
+ostream& operator<<(ostream& os, const RideOffer& offer)
+{
+	RoadMap* rm = RoadMap::getInstance();
+
+	vector<string> roadRoute = rm->getRoadsPassed(offer.getRoute());
+
+	struct tm * date = localtime(&offer.departureTime);
+
+	os << "Offered by driver: " << offer.driver->getName() << endl;
+
+	os << "Passengers:\n";
+	for (int i = 0; i < offer.hitchhikers.size(); ++i) {
+		os << "\t" <<offer.hitchhikers.at(i)->getName() << endl;
+	}
+
+	os << "From: " << offer.departurePlace << endl;
+	os << "To:" << offer.arrivalPlace << endl;
+
+	os << "Route:\n";
+	for (int i = 0; i < roadRoute.size(); ++i) {
+		os << "\t" << roadRoute.at(i) << endl;
+	}
+
+	os << "Departure time: " <<asctime(date);
+
+	return os;
 }
 

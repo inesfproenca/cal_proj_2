@@ -27,6 +27,8 @@ public:
      * Class default destructor
      */
     virtual ~RideRequest();
+
+    friend ostream& operator<<(ostream& os, const RideRequest& request);
 };
 
 #endif /* SRC_RIDEREQUEST_H_ */

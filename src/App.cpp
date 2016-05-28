@@ -110,8 +110,8 @@ vector <User*> App::getUsers(){
 
 void App::addRideRequest(User* user , uint departurePlace, uint arrivalPlace, time_t departureTime, time_t departureTolerance, time_t arrivalTolerance, int noSeats){
     Ride* r = new RideRequest(departurePlace, arrivalPlace, departureTime,departureTolerance,arrivalTolerance, noSeats, user);
-    requests.push_back(r);
-    tryToMatchRide(r);
+    if(!tryToMatchRide(r))
+    	requests.push_back(r);
 };
 
 void App::addRideOffer(User* user , uint departurePlace, uint arrivalPlace, time_t departureTime, time_t departureTolerance, time_t arrivalTolerance, int noSeats){
@@ -124,6 +124,29 @@ void App::showUsersInfo() {
     for(size_t i = 0; i < users.size(); i++){
         cout<< users[i]->getUserID() << " " << users[i]->getName() << " " << users[i]->getAddress() << endl;
     }
+}
+
+void App::showOffersInfo() {
+    for(size_t i = 0; i < offers.size(); i++){
+        cout << *dynamic_cast<RideOffer*>(offers[i]) << endl;
+    }
+}
+
+void App::showRequestsInfo() {
+    for(size_t i = 0; i < requests.size(); i++){
+        cout << *dynamic_cast<RideRequest*>(requests[i]) << endl;
+    }
+}
+
+void App::showAllInfo(){
+	cout << "Users:\n";
+	showUsersInfo();
+	cout << "-----------------------\n";
+	cout << "Offers:\n";
+	showOffersInfo();
+	cout << "-----------------------\n";
+	cout << "Unmatched requests:\n";
+	showRequestsInfo();
 }
 
 bool isPossible(RideOffer offer, RideRequest request,list<uint> route, list<double> dist){
@@ -181,9 +204,10 @@ bool App::matchRides(RideOffer &offer, RideRequest &request){
         return false;
 }
 
-void App::tryToMatchRide(Ride* newRide){
+bool App::tryToMatchRide(Ride* newRide){
 
     RoadMap* rm = RoadMap::getInstance();
+    bool found = false;
 
     if (dynamic_cast<RideOffer*>(newRide) == NULL){
         RideRequest* newRequest = dynamic_cast<RideRequest*>(newRide);
@@ -192,7 +216,7 @@ void App::tryToMatchRide(Ride* newRide){
             if(matchRides(*offer,*newRequest)){
                 cout << "Match found!!!" << endl;
                 rm->visualizePath(offer->getRoute());
-                return;
+                return true;
             }
         }
     }
@@ -204,9 +228,12 @@ void App::tryToMatchRide(Ride* newRide){
             RideRequest* request = dynamic_cast<RideRequest*>(requests[i]);
             if(matchRides(*newOffer,*request)){
                 requests.erase(requests.begin()+i);
+                found = true;
                 cout << "Match found!!!" << endl;
             }
         }
         rm->visualizePath(newOffer->getRoute());
     }
+
+    return found;
 }

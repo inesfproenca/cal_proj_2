@@ -164,16 +164,17 @@ void createRide(App &a, int rideType){
         cout << "Please insert the number of seats you are requesting: ";
     cin >> noSeats;
 
-	tm date;
+	tm date = getToday();
 	do {
 		cin.ignore();
 		getDate(date);
 		tm today = getToday();
-		if (today >date) {
+
+		if (today > date) {
 			cout << "Invalid date, please choose a date after today.";
 		}
 		else {
-			cout << date.tm_mday << "/" << date.tm_mon+1 << "/" << date.tm_year+1900 << endl;
+			cout << asctime(&date);
 			valid = true;
 		}
 	}while(!valid);
