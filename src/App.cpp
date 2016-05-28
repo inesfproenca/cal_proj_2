@@ -122,7 +122,9 @@ void App::addRideOffer(User* user , uint departurePlace, uint arrivalPlace, time
 
 void App::showUsersInfo() {
     for(size_t i = 0; i < users.size(); i++){
-        cout<< users[i]->getUserID() << " " << users[i]->getName() << " " << users[i]->getAddress() << endl;
+        cout << "Id: " << users[i]->getUserID() << endl;
+        cout << "\tName: " << users[i]->getName() <<endl;
+        cout << "\tAddress: " << users[i]->getAddress() << endl;
     }
 }
 

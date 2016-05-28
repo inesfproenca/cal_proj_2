@@ -1,26 +1,26 @@
-<-Utilizador1_Rua do Freixo>
-<-Utilizador2_Rua Costa Nova>
-<-Utilizador3_Rua do Estoril>
-<-Utilizador4_Rua do Estoril>
-<-Utilizador5_Rua Costa Nova>
-<-Utilizador6_Rua da Aguda>
-<-Utilizador7_Rua do Estoril>
-<-Utilizador8_Rua de Leca>
-<-Utilizador9_Rua das Condominhas>
-<-Utilizador10_Rua do Estoril>
-<-Utilizador11_Rua de Leca>
-<-Utilizador12_Rua da Aguda>
-<-Utilizador13_Rua da Aguda>
-<-Utilizador14_Rua da Aguda>
-<-Utilizador15_Largo  Costa Nova>
-<-Utilizador16_Rua do Progresso>
-<-Utilizador17_Largo Costa Nova>
-<-Utilizador18_Rua Julio Lourenco Pinto>
-<-Utilizador19_Rua de Carvalho Barbosa>
-<-Utilizador20_Rua Julio Lourenco Pinto>
-<-Utilizador21_Rua do Progresso>
-<-Utilizador22_Rua Julio Lourenco Pinto>
-<-Utilizador23_Rua das Condominhas>
-<-Utilizador24_Rua de Carvalho Barbosa>
-<-Utilizador25_Rua Campo Alegre>
-<-Utilizador26_Rua Campo ALegre>
+<-Andre Reis_Rua do Estoril>
+<-Bruno Marques_Rua Costa Nova>
+<-Ines Filipa Proenca_Rua Orfeao do Porto>
+<-Carla Almiro Alves_Rua do Estoril>
+<-Manoel Joao Cardozo_Rua Costa Nova>
+<-Bruno Ribeiro Castro_Rua da Aguda>
+<-Gabriela Santos Oliveira_Rua do Estoril>
+<-Antonio Pinto Dias_Rua de Leca>
+<-Brenda Silva Rocha_Rua das Condominhas>
+<-Matilde Costa Martins_Rua do Estoril>
+<-Rafael Carvalho Ferreira_Rua de Leca>
+<-Jose Melo Rodrigues_Rua da Aguda>
+<-Andre Almeida Azevedo_Rua da Aguda>
+<-Tania Cavalcanti Rodrigues_Rua da Aguda>
+<-Andre Cardoso Gomes_Largo  Costa Nova>
+<-Paulo Dias Cunha_Rua do Progresso>
+<-Matilde Lima Azevedo_Largo Costa Nova>
+<-Igor Santos Azevedo_Rua Julio Lourenco Pinto>
+<-Artur Cavalcanti Azevedo_Rua de Carvalho Barbosa>
+<-Ana Alves Fernandes_Rua Julio Lourenco Pinto>
+<-Bruna Santos Barros_Rua do Progresso>
+<-David Martins Sousa_Rua Julio Lourenco Pinto>
+<-Carla Araujo Rocha_Rua das Condominhas>
+<-Marisa Santos Araujo_Rua de Carvalho Barbosa>
+<-Ana Pinto Alves_Rua Campo Alegre>
+<-Beatriz Sousa Lima_Rua Campo Alegre>
