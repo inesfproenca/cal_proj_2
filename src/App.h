@@ -102,4 +102,7 @@ public:
 	 */
 	vector<User *> getUsers();
 
+	void findAndPrintRoadMatches(string road);
+
+	void findAndPrintUserMatches(string name);
 };

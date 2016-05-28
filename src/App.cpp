@@ -239,3 +239,31 @@ bool App::tryToMatchRide(Ride* newRide){
 
     return found;
 }
+
+void App::findAndPrintRoadMatches(string road){
+	int matches = 0;
+    for(size_t i = 0; i < offers.size(); i++){
+        RideOffer* offer = dynamic_cast<RideOffer*>(offers[i]);
+
+        if(offer->findDestinationInPath(road)){
+        	cout << *offer << endl;
+        	matches ++;
+        }
+    }
+    if(matches == 0)
+    	cout << "Not found\n";
+}
+
+void App::findAndPrintUserMatches(string name){
+	int matches = 0;
+    for(size_t i = 0; i < offers.size(); i++){
+        RideOffer* offer = dynamic_cast<RideOffer*>(offers[i]);
+
+        if(offer->findPassenger(name)){
+        	cout << *offer << endl;
+        	matches ++;
+        }
+    }
+    if(matches == 0)
+    	cout << "Not found\n";
+}

@@ -12,7 +12,7 @@ int main(){
 	RoadMap* rm = RoadMap::getInstance();
 	rm->viewMap();
 
-	string filename;
+	string filename, road, name;
 	App application;
 
 	ifstream test;
@@ -50,6 +50,8 @@ int main(){
 			if (counter != 0){
 				cout << "You have introduced an invalid option!\n" << endl;
 			}
+			cout << "5 - Find Passenger" << endl;
+			cout << "4 - Find Destination" << endl;
 			cout << "3 - View All Info" << endl;
 			cout << "2 - Request Ride" << endl;
 			cout << "1 - Offer Ride" << endl;
@@ -58,13 +60,23 @@ int main(){
 			cout << "Choose appropriate numerical option: ";
 			cin >> choice;
 			counter ++;
-		}while( (choice < 0) || (choice > 3));
+		}while( (choice < 0) || (choice > 5));
 		counter = 0;
 
 		switch(choice){
+		case 5:
+			cin.ignore(1000,'\n');
+			cout << "Please insert the name you wish to search: ";
+			getline(cin,name);
+			application.findAndPrintUserMatches(name);
+			break;
+		case 4:
+			cin.ignore(1000,'\n');
+			cout << "Please insert your destination: ";
+			getline(cin,road);
+			application.findAndPrintRoadMatches(road);
+			break;
 		case 3:
-			//TODO: SHOW INFO
-			//application.displayAllInfo();
 			application.showAllInfo();
 			cout<<endl;
 			break;
