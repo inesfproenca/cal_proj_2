@@ -177,8 +177,6 @@ void RoadMap::resetMap(){
 }
 
 void RoadMap::viewMap(){
-	//	uint width = 800;
-	//	uint height = 1113;
 	uint width = 1360;
 	uint height = 1300;
 
@@ -187,7 +185,7 @@ void RoadMap::viewMap(){
 	//Colocar a imagem �background.jpg� como fundo
 	gv->setBackground("background.jpg");
 
-	gv->createWindow(width, height);
+	gv->createWindow(width/2, height/2);
 
 	gv->defineVertexColor("blue");
 	gv->defineEdgeColor("black");

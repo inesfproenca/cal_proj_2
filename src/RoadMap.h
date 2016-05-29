@@ -61,11 +61,11 @@ private:
 	 */
 	RoadMap(const std::string &fnodes, const std::string &froads, const std::string &fsubroads);
 
+public:
 	/**
 	 * Resets map to its inicial condition
 	 */
 	void resetMap();
-public:
 
 	/**
 	 * Shows the map on the screen

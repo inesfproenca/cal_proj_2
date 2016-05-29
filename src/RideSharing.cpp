@@ -44,6 +44,8 @@ int main(){
 		cout << "Starting without RidesTest." << endl;
 	}
 
+	rm->resetMap();
+
 	int choice, counter = 0;
 	do{
 		do{
