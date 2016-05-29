@@ -34,21 +34,21 @@ RideOffer::~RideOffer() {
 
 //String matching functions
 vector<int> prefixFunction(string toSearch){
-	vector<int> pi(toSearch.length());
-	pi[0];
-	int k = 0;
+	vector<int> prefix(toSearch.length());
+	prefix[0] = -1;
+	int k = -1;
 
 	for(int i = 1; i < toSearch.length();i++){
-		while(k>0 && toSearch[k] != toSearch[i])
-			k = pi[k];
+		while(k>-1 && toSearch[k+1] != toSearch[i])
+			k = prefix[k];
 
-		if(toSearch[k] == toSearch[i])
+		if(toSearch[k+1] == toSearch[i])
 			k++;
 
-		pi[i] = k;
+		prefix[i] = k;
 	}
 
-	return pi;
+	return prefix;
 }
 
 /**
@@ -56,21 +56,21 @@ vector<int> prefixFunction(string toSearch){
  */
 int numStringMatching(vector<string> texts, string toSearch){
 	int result = 0;
-	vector<int> pi = prefixFunction(toSearch);
-	unsigned int q = 0;
+	vector<int> prefix = prefixFunction(toSearch);
 
 	for (uint j = 0; j < texts.size(); ++j) {
 		string text = texts[j];
+		int q = -1;
 		for(unsigned int i = 0; i < text.length();i++){
-			while(q > 0 && toSearch[q] != text[i] && q != toSearch.length()-1)
-				q = pi[q];
+			while(q > -1 && toSearch[q+1] != text[i] && q != toSearch.length()-1)
+				q = prefix[q];
 
-			if(toSearch[q] == text[i])
-				q = q+1;
+			if(toSearch[q+1] == text[i])
+				q++;
 
 			if(q == toSearch.length()-1){
 				result++;
-				q = pi[q];
+				q = prefix[q];
 			}
 		}
 	}
