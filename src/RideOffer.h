@@ -38,9 +38,9 @@ public:
 
     void addRequest(RideRequest request);
 
-    bool findDestinationInPath(string dest);
+    int findDestinationInPath(string dest);
 
-    bool findPassenger(string name);
+    int findPassenger(string name);
 
     friend ostream& operator<<(ostream& os, const RideOffer& offer);
 };

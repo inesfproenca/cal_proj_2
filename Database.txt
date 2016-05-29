@@ -18,7 +18,7 @@
 <-Igor Santos Azevedo_Rua Julio Lourenco Pinto>
 <-Artur Cavalcanti Azevedo_Rua de Carvalho Barbosa>
 <-Ana Alves Fernandes_Rua Julio Lourenco Pinto>
-<-Bruna Santos Barros_Rua do Progresso>
+<-Bruna Marques_Rua do Progresso>
 <-David Martins Sousa_Rua Julio Lourenco Pinto>
 <-Carla Araujo Rocha_Rua das Condominhas>
 <-Marisa Santos Araujo_Rua de Carvalho Barbosa>

@@ -120,22 +120,23 @@ int numApproximateStringMatching(vector<string> texts, string toSearch){
 }
 
 //TODO change tolerance
-bool RideOffer::findDestinationInPath(string dest){
+int RideOffer::findDestinationInPath(string dest){
 	RoadMap* rm = RoadMap::getInstance();
 	int tolerance = dest.size()/2;
 
 	vector<string> roadRoute = rm->getRoadsPassed(route);
 
 	if(numStringMatching(roadRoute,dest) > 0)
+		return 0;
+
+	int minDist = numApproximateStringMatching(roadRoute,dest);
+	if(minDist < tolerance)
 		return true;
 
-	if(numApproximateStringMatching(roadRoute,dest) < tolerance)
-		return true;
-
-	return false;
+	return -1;
 }
 
-bool RideOffer::findPassenger(string name){
+int RideOffer::findPassenger(string name){
 	vector<string> passengerNames;
 	int tolerance = name.size()/2;
 
@@ -146,12 +147,13 @@ bool RideOffer::findPassenger(string name){
 	}
 
 	if(numStringMatching(passengerNames,name) > 0)
-		return true;
+		return 0;
 
-	if(numApproximateStringMatching(passengerNames,name) < tolerance)
-		return true;
+	int minDist = numApproximateStringMatching(passengerNames,name);
+	if(minDist < tolerance)
+		return minDist;
 
-	return false;
+	return -1;
 }
 
 ostream& operator<<(ostream& os, const RideOffer& offer)
