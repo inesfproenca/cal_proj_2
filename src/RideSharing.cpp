@@ -21,7 +21,7 @@ int main(){
 		cout << "Introduce filename: ";
 		getline(cin, filename);
 		if(filename == ""){
-			filename = "Database.txt";
+			filename = "userDatabase.txt";
 			break;
 		}
 		test.open(filename.c_str());
@@ -50,6 +50,7 @@ int main(){
 			if (counter != 0){
 				cout << "You have introduced an invalid option!\n" << endl;
 			}
+			cout << "6 - Show offer path" << endl;
 			cout << "5 - Find Passenger" << endl;
 			cout << "4 - Find Destination" << endl;
 			cout << "3 - View All Info" << endl;
@@ -60,10 +61,16 @@ int main(){
 			cout << "Choose appropriate numerical option: ";
 			cin >> choice;
 			counter ++;
-		}while( (choice < 0) || (choice > 5));
+		}while( (choice < 0) || (choice > 6));
 		counter = 0;
 
 		switch(choice){
+		case 6:
+			unsigned int id;
+			cout << "Please insert offer's id: ";
+			cin >> id;
+			application.showPath(id);
+			break;
 		case 5:
 			cin.ignore(1000,'\n');
 			cout << "Please insert the name you wish to search: ";

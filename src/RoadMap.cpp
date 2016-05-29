@@ -241,7 +241,6 @@ void RoadMap::insertNewSrc(uint srcId, uint destId, uint newSrc, list<uint>&must
 	}
 
 	if(minDist == INT_INFINITY){
-		cout << "Impossible!!!!!" <<endl;
 		return;
 	}
 	if(*next == newSrc){

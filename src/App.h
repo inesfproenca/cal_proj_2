@@ -105,4 +105,6 @@ public:
 	void findAndPrintRoadMatches(string road);
 
 	void findAndPrintUserMatches(string name);
+
+	void showPath(uint offerId);
 };

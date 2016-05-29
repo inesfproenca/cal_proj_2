@@ -75,7 +75,6 @@ void App::readData(string filename) {
 		while (in.good()) {
 			string dummy;
 			string name, address, licensePlate, brand;
-			int capacity;
 
 			getline(in, dummy, '-');
 
@@ -113,12 +112,15 @@ void App::addRideRequest(User* user , uint departurePlace, uint arrivalPlace, ti
 	Ride* r = new RideRequest(departurePlace, arrivalPlace, departureTime,departureTolerance,arrivalTolerance, noSeats, user);
 	if(!tryToMatchRide(r))
 		requests.push_back(r);
+	else
+		cout << "Match found!!!" << endl;
 };
 
 void App::addRideOffer(User* user , uint departurePlace, uint arrivalPlace, time_t departureTime, time_t departureTolerance, time_t arrivalTolerance, int noSeats){
 	Ride* r = new RideOffer(departurePlace, arrivalPlace, departureTime, departureTolerance,arrivalTolerance, noSeats, user);
 	offers.push_back(r);
-	tryToMatchRide(r);
+	if(tryToMatchRide(r))
+		cout << "Match found!!!" << endl;
 }
 
 void App::showUsersInfo() {
@@ -131,7 +133,7 @@ void App::showUsersInfo() {
 
 void App::showOffersInfo() {
 	for(size_t i = 0; i < offers.size(); i++){
-		cout << *dynamic_cast<RideOffer*>(offers[i]) << endl;
+		cout << "Id: " << i << endl << *dynamic_cast<RideOffer*>(offers[i]) << endl;
 	}
 }
 
@@ -217,7 +219,6 @@ bool App::tryToMatchRide(Ride* newRide){
 		for (int i = 0; i < offers.size(); ++i) {
 			RideOffer* offer = dynamic_cast<RideOffer*>(offers[i]);
 			if(matchRides(*offer,*newRequest)){
-				cout << "Match found!!!" << endl;
 				rm->visualizePath(offer->getRoute());
 				return true;
 			}
@@ -232,7 +233,6 @@ bool App::tryToMatchRide(Ride* newRide){
 			if(matchRides(*newOffer,*request)){
 				requests.erase(requests.begin()+i);
 				found = true;
-				cout << "Match found!!!" << endl;
 				i--;
 			}
 		}
@@ -295,4 +295,13 @@ void App::findAndPrintUserMatches(string name){
 			it++;
 		}
 	}
+}
+
+void App::showPath(uint offerId){
+	RoadMap* rm = RoadMap::getInstance();
+
+	if(offerId < offers.size())
+		rm->visualizePath(dynamic_cast<RideOffer*>(offers[offerId])->getRoute());
+	else
+		cout << "Invalid id\n";
 }
