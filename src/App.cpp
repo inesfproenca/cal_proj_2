@@ -46,8 +46,39 @@ void App::readDataRides(string filename) {
 						addRideRequest( users.at(i) ,departNode,arrivalNode, departure, departTolerance, arrivalTolerance, noseats);
 					}
 				}
+			}
+			if (dummy == ">") {
+				getline(in, dummy, '_');
+				ID = atoi(dummy.c_str());
+
+				getline(in, dummy, '_');
+				departNode = atoi(dummy.c_str());
 
 
+				getline(in, dummy, '_');
+				arrivalNode =atoi(dummy.c_str());
+
+
+				getline(in, dummy, '_');
+				departure = atoi(dummy.c_str());
+
+
+				getline (in, dummy, '_');
+				departTolerance = atoi(dummy.c_str());
+
+
+				getline(in, dummy, '_');
+				arrivalTolerance = atoi(dummy.c_str());
+
+
+				getline(in, dummy, '>');
+				noseats = atoi(dummy.c_str());
+
+				for (unsigned i = 0; i < users.size();i++){
+					if((users[i])->getUserID() == ID){
+						addRideOffer( users.at(i) ,departNode,arrivalNode, departure, departTolerance, arrivalTolerance, noseats);
+					}
+				}
 			}
 
 			if (!in.eof())

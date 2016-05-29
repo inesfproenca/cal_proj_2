@@ -122,7 +122,7 @@ int numApproximateStringMatching(vector<string> texts, string toSearch){
 //TODO change tolerance
 int RideOffer::findDestinationInPath(string dest){
 	RoadMap* rm = RoadMap::getInstance();
-	int tolerance = dest.size()/2;
+	int tolerance = dest.size();
 
 	vector<string> roadRoute = rm->getRoadsPassed(route);
 
@@ -138,7 +138,7 @@ int RideOffer::findDestinationInPath(string dest){
 
 int RideOffer::findPassenger(string name){
 	vector<string> passengerNames;
-	int tolerance = name.size()/2;
+	int tolerance = name.size();
 
 	passengerNames.push_back(driver->getName());
 
