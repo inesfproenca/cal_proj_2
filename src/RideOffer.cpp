@@ -131,7 +131,7 @@ int RideOffer::findDestinationInPath(string dest){
 
 	int minDist = numApproximateStringMatching(roadRoute,dest);
 	if(minDist < tolerance)
-		return true;
+		return minDist;
 
 	return -1;
 }

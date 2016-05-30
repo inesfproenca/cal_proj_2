@@ -102,9 +102,21 @@ public:
 	 */
 	vector<User *> getUsers();
 
+	/**
+	 * List by crescent order of number of alterations the offers where the given road name could be found
+	 * @param road road name string
+	 */
 	void findAndPrintRoadMatches(string road);
 
+	/**
+	 * List by crescent order of number of alterations the offers where the given user name could be found
+	 * @param name user name string
+	 */
 	void findAndPrintUserMatches(string name);
 
+    /**
+     * Shows on GraphViewer the path with given offerId
+     * @param offerId index of the given path
+     */
 	void showPath(uint offerId);
 };
