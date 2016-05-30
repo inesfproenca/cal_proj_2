@@ -7,9 +7,14 @@ var searchData=
   ['setedgelabel',['setEdgeLabel',['../class_graph_viewer.html#a447cca0064e785654c2105602c2961ca',1,'GraphViewer']]],
   ['setedgethickness',['setEdgeThickness',['../class_graph_viewer.html#a07f598272fe3515455eab13be749604a',1,'GraphViewer']]],
   ['setedgeweight',['setEdgeWeight',['../class_graph_viewer.html#ac211de009a0afe2e6d44f4f8d030a2cc',1,'GraphViewer']]],
+  ['setroute',['setRoute',['../class_ride_offer.html#a173345d8bc9af6b0d951f8202aab0fef',1,'RideOffer']]],
   ['setvertexcolor',['setVertexColor',['../class_graph_viewer.html#a8b542d7e09e81a45a74760c19233beb0',1,'GraphViewer']]],
   ['setvertexicon',['setVertexIcon',['../class_graph_viewer.html#a02d5f7393eab9a2d1b66719039597a64',1,'GraphViewer']]],
   ['setvertexlabel',['setVertexLabel',['../class_graph_viewer.html#ac25d7d007022fda16799808ba136e909',1,'GraphViewer']]],
   ['setvertexsize',['setVertexSize',['../class_graph_viewer.html#ae930dfdfcdeb7a871eefb6028d74b9f9',1,'GraphViewer']]],
+  ['showallinfo',['showAllInfo',['../class_app.html#afe57cd7093f69c8ecf7ceacd1f4688db',1,'App']]],
+  ['showoffersinfo',['showOffersInfo',['../class_app.html#a7872c96b950fd8e123d85dfdfaf3f96c',1,'App']]],
+  ['showpath',['showPath',['../class_app.html#a486e65c74481e5f4355074f86e0ef111',1,'App']]],
+  ['showrequestsinfo',['showRequestsInfo',['../class_app.html#ae670afaf5556ba6faafdb318333adcd7',1,'App']]],
   ['showusersinfo',['showUsersInfo',['../class_app.html#a587b90a006f1dacc52608259f729ee30',1,'App']]]
 ];

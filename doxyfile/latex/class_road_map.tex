@@ -23,6 +23,8 @@ Collaboration diagram for Road\+Map\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \hyperlink{class_road_map_a3a2719b8e8cbbd197b94092a33376666}{reset\+Map} ()
+\item 
 void \hyperlink{class_road_map_a8783164e6e3f029e2ca1bac4ee620db5}{view\+Map} ()
 \item 
 void \hyperlink{class_road_map_a51dda1085cb948aef5593530223aa202}{best\+Path} (uint new\+Src, uint new\+Dest, list$<$ uint $>$ \&old\+Path, list$<$ double $>$ \&dist)
@@ -33,7 +35,11 @@ void \hyperlink{class_road_map_a00a0a45209179dae49cebd1c50908dd6}{insert\+New\+S
 \item 
 uint \hyperlink{class_road_map_aca51fa3ea3ae51d9790f186092fe9a29}{get\+Crossroad\+Id\+From\+Address} (string road\+Name, double door\+Number)
 \item 
+bool \hyperlink{class_road_map_aa1e10da727052cf0ca8c4a050e1c684b}{valid\+Crossroad\+Id} (uint id)
+\item 
 double \hyperlink{class_road_map_a9970c4e809908d7a3784b23666ec5d10}{get\+Dist} (uint src\+Id, uint dest\+Id)
+\item 
+vector$<$ string $>$ \hyperlink{class_road_map_acecd13293d634caa11afba05ec496233}{get\+Roads\+Passed} (list$<$ uint $>$ path)
 \item 
 void \hyperlink{class_road_map_a700ada8d9925f1322804e0d08a007ff1}{visualize\+Path} (list$<$ uint $>$ path)
 \item 
@@ -42,7 +48,7 @@ void \hyperlink{class_road_map_a700ada8d9925f1322804e0d08a007ff1}{visualize\+Pat
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_road_map_ad106d7b921a092b9375682a5ec475fae}{}static \hyperlink{class_road_map}{Road\+Map} $\ast$ {\bfseries get\+Instance} ()\label{class_road_map_ad106d7b921a092b9375682a5ec475fae}
+static \hyperlink{class_road_map}{Road\+Map} $\ast$ {\bfseries get\+Instance} ()\hypertarget{class_road_map_ad106d7b921a092b9375682a5ec475fae}{}\label{class_road_map_ad106d7b921a092b9375682a5ec475fae}
 
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
@@ -52,48 +58,63 @@ void \hyperlink{class_road_map_a700ada8d9925f1322804e0d08a007ff1}{visualize\+Pat
 \hyperlink{class_road}{Road} Map 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_road_map_a4945159808914eb623e1abb3b9b63306}{}\index{Road\+Map@{Road\+Map}!````~Road\+Map@{$\sim$\+Road\+Map}}
+\index{Road\+Map@{Road\+Map}!````~Road\+Map@{$\sim$\+Road\+Map}}
 \index{````~Road\+Map@{$\sim$\+Road\+Map}!Road\+Map@{Road\+Map}}
-\subsubsection[{$\sim$\+Road\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}Road\+Map\+::$\sim$\+Road\+Map (
+\subsubsection[{\texorpdfstring{$\sim$\+Road\+Map()}{~RoadMap()}}]{\setlength{\rightskip}{0pt plus 5cm}Road\+Map\+::$\sim$\+Road\+Map (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_road_map_a4945159808914eb623e1abb3b9b63306}
+)}\hypertarget{class_road_map_a4945159808914eb623e1abb3b9b63306}{}\label{class_road_map_a4945159808914eb623e1abb3b9b63306}
 Default class destructor 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_road_map_a51dda1085cb948aef5593530223aa202}{}\index{Road\+Map@{Road\+Map}!best\+Path@{best\+Path}}
+\index{Road\+Map@{Road\+Map}!best\+Path@{best\+Path}}
 \index{best\+Path@{best\+Path}!Road\+Map@{Road\+Map}}
-\subsubsection[{best\+Path(uint new\+Src, uint new\+Dest, list$<$ uint $>$ \&old\+Path, list$<$ double $>$ \&dist)}]{\setlength{\rightskip}{0pt plus 5cm}void Road\+Map\+::best\+Path (
+\subsubsection[{\texorpdfstring{best\+Path(uint new\+Src, uint new\+Dest, list$<$ uint $>$ \&old\+Path, list$<$ double $>$ \&dist)}{bestPath(uint newSrc, uint newDest, list< uint > &oldPath, list< double > &dist)}}]{\setlength{\rightskip}{0pt plus 5cm}void Road\+Map\+::best\+Path (
 \begin{DoxyParamCaption}
 \item[{uint}]{new\+Src, }
 \item[{uint}]{new\+Dest, }
 \item[{list$<$ uint $>$ \&}]{old\+Path, }
 \item[{list$<$ double $>$ \&}]{dist}
 \end{DoxyParamCaption}
-)}\label{class_road_map_a51dda1085cb948aef5593530223aa202}
-Finds the best path given the current path and new 2 points \hypertarget{class_road_map_aca51fa3ea3ae51d9790f186092fe9a29}{}\index{Road\+Map@{Road\+Map}!get\+Crossroad\+Id\+From\+Address@{get\+Crossroad\+Id\+From\+Address}}
+)}\hypertarget{class_road_map_a51dda1085cb948aef5593530223aa202}{}\label{class_road_map_a51dda1085cb948aef5593530223aa202}
+Finds the best path given the current path and new 2 points \index{Road\+Map@{Road\+Map}!get\+Crossroad\+Id\+From\+Address@{get\+Crossroad\+Id\+From\+Address}}
 \index{get\+Crossroad\+Id\+From\+Address@{get\+Crossroad\+Id\+From\+Address}!Road\+Map@{Road\+Map}}
-\subsubsection[{get\+Crossroad\+Id\+From\+Address(string road\+Name, double door\+Number)}]{\setlength{\rightskip}{0pt plus 5cm}uint Road\+Map\+::get\+Crossroad\+Id\+From\+Address (
+\subsubsection[{\texorpdfstring{get\+Crossroad\+Id\+From\+Address(string road\+Name, double door\+Number)}{getCrossroadIdFromAddress(string roadName, double doorNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}uint Road\+Map\+::get\+Crossroad\+Id\+From\+Address (
 \begin{DoxyParamCaption}
 \item[{string}]{road\+Name, }
 \item[{double}]{door\+Number}
 \end{DoxyParamCaption}
-)}\label{class_road_map_aca51fa3ea3ae51d9790f186092fe9a29}
-Given an address and door number, returns the crossroad id \hypertarget{class_road_map_a9970c4e809908d7a3784b23666ec5d10}{}\index{Road\+Map@{Road\+Map}!get\+Dist@{get\+Dist}}
+)}\hypertarget{class_road_map_aca51fa3ea3ae51d9790f186092fe9a29}{}\label{class_road_map_aca51fa3ea3ae51d9790f186092fe9a29}
+Given an address and door number, returns the crossroad id \index{Road\+Map@{Road\+Map}!get\+Dist@{get\+Dist}}
 \index{get\+Dist@{get\+Dist}!Road\+Map@{Road\+Map}}
-\subsubsection[{get\+Dist(uint src\+Id, uint dest\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}double Road\+Map\+::get\+Dist (
+\subsubsection[{\texorpdfstring{get\+Dist(uint src\+Id, uint dest\+Id)}{getDist(uint srcId, uint destId)}}]{\setlength{\rightskip}{0pt plus 5cm}double Road\+Map\+::get\+Dist (
 \begin{DoxyParamCaption}
 \item[{uint}]{src\+Id, }
 \item[{uint}]{dest\+Id}
 \end{DoxyParamCaption}
-)}\label{class_road_map_a9970c4e809908d7a3784b23666ec5d10}
+)}\hypertarget{class_road_map_a9970c4e809908d7a3784b23666ec5d10}{}\label{class_road_map_a9970c4e809908d7a3784b23666ec5d10}
 \begin{DoxyReturn}{Returns}
 the distance between two inodes 
 \end{DoxyReturn}
-\hypertarget{class_road_map_a6e25c8aefc49316e95c3eb3111d06151}{}\index{Road\+Map@{Road\+Map}!insert\+New\+Dest@{insert\+New\+Dest}}
+\index{Road\+Map@{Road\+Map}!get\+Roads\+Passed@{get\+Roads\+Passed}}
+\index{get\+Roads\+Passed@{get\+Roads\+Passed}!Road\+Map@{Road\+Map}}
+\subsubsection[{\texorpdfstring{get\+Roads\+Passed(list$<$ uint $>$ path)}{getRoadsPassed(list< uint > path)}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ string $>$ Road\+Map\+::get\+Roads\+Passed (
+\begin{DoxyParamCaption}
+\item[{list$<$ uint $>$}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{class_road_map_acecd13293d634caa11afba05ec496233}{}\label{class_road_map_acecd13293d634caa11afba05ec496233}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & list of crossroad ids of given path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the name of the roads passed in certain path 
+\end{DoxyReturn}
+\index{Road\+Map@{Road\+Map}!insert\+New\+Dest@{insert\+New\+Dest}}
 \index{insert\+New\+Dest@{insert\+New\+Dest}!Road\+Map@{Road\+Map}}
-\subsubsection[{insert\+New\+Dest(uint id\+\_\+src, uint id\+\_\+dest, list$<$ uint $>$ must\+Pass, list$<$ uint $>$ \&path, list$<$ double $>$ \&dist)}]{\setlength{\rightskip}{0pt plus 5cm}bool Road\+Map\+::insert\+New\+Dest (
+\subsubsection[{\texorpdfstring{insert\+New\+Dest(uint id\+\_\+src, uint id\+\_\+dest, list$<$ uint $>$ must\+Pass, list$<$ uint $>$ \&path, list$<$ double $>$ \&dist)}{insertNewDest(uint id_src, uint id_dest, list< uint > mustPass, list< uint > &path, list< double > &dist)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Road\+Map\+::insert\+New\+Dest (
 \begin{DoxyParamCaption}
 \item[{uint}]{id\+\_\+src, }
 \item[{uint}]{id\+\_\+dest, }
@@ -101,10 +122,10 @@ the distance between two inodes
 \item[{list$<$ uint $>$ \&}]{path, }
 \item[{list$<$ double $>$ \&}]{dist}
 \end{DoxyParamCaption}
-)}\label{class_road_map_a6e25c8aefc49316e95c3eb3111d06151}
-Inserts the new destination to pass by on the existing path \hypertarget{class_road_map_a00a0a45209179dae49cebd1c50908dd6}{}\index{Road\+Map@{Road\+Map}!insert\+New\+Src@{insert\+New\+Src}}
+)}\hypertarget{class_road_map_a6e25c8aefc49316e95c3eb3111d06151}{}\label{class_road_map_a6e25c8aefc49316e95c3eb3111d06151}
+Inserts the new destination to pass by on the existing path \index{Road\+Map@{Road\+Map}!insert\+New\+Src@{insert\+New\+Src}}
 \index{insert\+New\+Src@{insert\+New\+Src}!Road\+Map@{Road\+Map}}
-\subsubsection[{insert\+New\+Src(uint src\+Id, uint dest\+Id, uint new\+Src, list$<$ uint $>$ \&must\+Pass, list$<$ uint $>$ \&path, list$<$ double $>$ \&dist)}]{\setlength{\rightskip}{0pt plus 5cm}void Road\+Map\+::insert\+New\+Src (
+\subsubsection[{\texorpdfstring{insert\+New\+Src(uint src\+Id, uint dest\+Id, uint new\+Src, list$<$ uint $>$ \&must\+Pass, list$<$ uint $>$ \&path, list$<$ double $>$ \&dist)}{insertNewSrc(uint srcId, uint destId, uint newSrc, list< uint > &mustPass, list< uint > &path, list< double > &dist)}}]{\setlength{\rightskip}{0pt plus 5cm}void Road\+Map\+::insert\+New\+Src (
 \begin{DoxyParamCaption}
 \item[{uint}]{src\+Id, }
 \item[{uint}]{dest\+Id, }
@@ -113,24 +134,38 @@ Inserts the new destination to pass by on the existing path \hypertarget{class_r
 \item[{list$<$ uint $>$ \&}]{path, }
 \item[{list$<$ double $>$ \&}]{dist}
 \end{DoxyParamCaption}
-)}\label{class_road_map_a00a0a45209179dae49cebd1c50908dd6}
-Inserts the new point to pick-\/up a user to pass by on the existing path \hypertarget{class_road_map_a8783164e6e3f029e2ca1bac4ee620db5}{}\index{Road\+Map@{Road\+Map}!view\+Map@{view\+Map}}
-\index{view\+Map@{view\+Map}!Road\+Map@{Road\+Map}}
-\subsubsection[{view\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}void Road\+Map\+::view\+Map (
+)}\hypertarget{class_road_map_a00a0a45209179dae49cebd1c50908dd6}{}\label{class_road_map_a00a0a45209179dae49cebd1c50908dd6}
+Inserts the new point to pick-\/up a user to pass by on the existing path \index{Road\+Map@{Road\+Map}!reset\+Map@{reset\+Map}}
+\index{reset\+Map@{reset\+Map}!Road\+Map@{Road\+Map}}
+\subsubsection[{\texorpdfstring{reset\+Map()}{resetMap()}}]{\setlength{\rightskip}{0pt plus 5cm}void Road\+Map\+::reset\+Map (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_road_map_a8783164e6e3f029e2ca1bac4ee620db5}
-Shows the map on the screen \hypertarget{class_road_map_a700ada8d9925f1322804e0d08a007ff1}{}\index{Road\+Map@{Road\+Map}!visualize\+Path@{visualize\+Path}}
+)}\hypertarget{class_road_map_a3a2719b8e8cbbd197b94092a33376666}{}\label{class_road_map_a3a2719b8e8cbbd197b94092a33376666}
+Resets map to its inicial condition \index{Road\+Map@{Road\+Map}!valid\+Crossroad\+Id@{valid\+Crossroad\+Id}}
+\index{valid\+Crossroad\+Id@{valid\+Crossroad\+Id}!Road\+Map@{Road\+Map}}
+\subsubsection[{\texorpdfstring{valid\+Crossroad\+Id(uint id)}{validCrossroadId(uint id)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Road\+Map\+::valid\+Crossroad\+Id (
+\begin{DoxyParamCaption}
+\item[{uint}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{class_road_map_aa1e10da727052cf0ca8c4a050e1c684b}{}\label{class_road_map_aa1e10da727052cf0ca8c4a050e1c684b}
+Given an id, checks if there is a crossroad with that id \index{Road\+Map@{Road\+Map}!view\+Map@{view\+Map}}
+\index{view\+Map@{view\+Map}!Road\+Map@{Road\+Map}}
+\subsubsection[{\texorpdfstring{view\+Map()}{viewMap()}}]{\setlength{\rightskip}{0pt plus 5cm}void Road\+Map\+::view\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_road_map_a8783164e6e3f029e2ca1bac4ee620db5}{}\label{class_road_map_a8783164e6e3f029e2ca1bac4ee620db5}
+Shows the map on the screen \index{Road\+Map@{Road\+Map}!visualize\+Path@{visualize\+Path}}
 \index{visualize\+Path@{visualize\+Path}!Road\+Map@{Road\+Map}}
-\subsubsection[{visualize\+Path(list$<$ uint $>$ path)}]{\setlength{\rightskip}{0pt plus 5cm}void Road\+Map\+::visualize\+Path (
+\subsubsection[{\texorpdfstring{visualize\+Path(list$<$ uint $>$ path)}{visualizePath(list< uint > path)}}]{\setlength{\rightskip}{0pt plus 5cm}void Road\+Map\+::visualize\+Path (
 \begin{DoxyParamCaption}
 \item[{list$<$ uint $>$}]{path}
 \end{DoxyParamCaption}
-)}\label{class_road_map_a700ada8d9925f1322804e0d08a007ff1}
+)}\hypertarget{class_road_map_a700ada8d9925f1322804e0d08a007ff1}{}\label{class_road_map_a700ada8d9925f1322804e0d08a007ff1}
 Shows the given path on the graphviewer 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Inês/workspace/cal\+\_\+proj\+\_\+1/src/Road\+Map.\+h\item 
-C\+:/\+Users/\+Inês/workspace/cal\+\_\+proj\+\_\+1/src/Road\+Map.\+cpp\end{DoxyCompactItemize}
+src/Road\+Map.\+h\item 
+src/Road\+Map.\+cpp\end{DoxyCompactItemize}

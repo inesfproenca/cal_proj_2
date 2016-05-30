@@ -1,15 +1,14 @@
 var searchData=
 [
-  ['setbackground',['setBackground',['../class_graph_viewer.html#a02437b5fecd8b90de24436068312d593',1,'GraphViewer']]],
-  ['setedgecolor',['setEdgeColor',['../class_graph_viewer.html#a07ccc96707efae4aa5f3ced3dca015af',1,'GraphViewer']]],
-  ['setedgedashed',['setEdgeDashed',['../class_graph_viewer.html#a1698f1c6b3a8e7cabc7b7d7cf42fc7f0',1,'GraphViewer']]],
-  ['setedgeflow',['setEdgeFlow',['../class_graph_viewer.html#a69eb065145063e4dea41961e92e35c8e',1,'GraphViewer']]],
-  ['setedgelabel',['setEdgeLabel',['../class_graph_viewer.html#a447cca0064e785654c2105602c2961ca',1,'GraphViewer']]],
-  ['setedgethickness',['setEdgeThickness',['../class_graph_viewer.html#a07f598272fe3515455eab13be749604a',1,'GraphViewer']]],
-  ['setedgeweight',['setEdgeWeight',['../class_graph_viewer.html#ac211de009a0afe2e6d44f4f8d030a2cc',1,'GraphViewer']]],
-  ['setvertexcolor',['setVertexColor',['../class_graph_viewer.html#a8b542d7e09e81a45a74760c19233beb0',1,'GraphViewer']]],
-  ['setvertexicon',['setVertexIcon',['../class_graph_viewer.html#a02d5f7393eab9a2d1b66719039597a64',1,'GraphViewer']]],
-  ['setvertexlabel',['setVertexLabel',['../class_graph_viewer.html#ac25d7d007022fda16799808ba136e909',1,'GraphViewer']]],
-  ['setvertexsize',['setVertexSize',['../class_graph_viewer.html#ae930dfdfcdeb7a871eefb6028d74b9f9',1,'GraphViewer']]],
-  ['showusersinfo',['showUsersInfo',['../class_app.html#a587b90a006f1dacc52608259f729ee30',1,'App']]]
+  ['readdata',['readData',['../class_app.html#ab996c03e3b8455a98c3ee32684353bf4',1,'App']]],
+  ['readdatarides',['readDataRides',['../class_app.html#a22ee53e2dc589184357e31a61bbb1bbc',1,'App']]],
+  ['rearrange',['rearrange',['../class_graph_viewer.html#a3009a66958686ccb7e78b68e37c3c423',1,'GraphViewer']]],
+  ['removeedge',['removeEdge',['../class_graph_viewer.html#a9a8ee68c7c12b373affbe4069dd95d72',1,'GraphViewer']]],
+  ['removenode',['removeNode',['../class_graph_viewer.html#a0c418639bb911eb827cabf895915f775',1,'GraphViewer']]],
+  ['resetmap',['resetMap',['../class_road_map.html#a3a2719b8e8cbbd197b94092a33376666',1,'RoadMap']]],
+  ['ride',['Ride',['../class_ride.html#aef9cd8f2760f8e0b46eb268e69b007b9',1,'Ride::Ride()'],['../class_ride.html#a7642ec84a4f8522c58179962b142b276',1,'Ride::Ride(uint departurePlace, uint arrivalPlace, time_t departureTime, time_t departureTolerance, time_t arrivalTolerance, int noSeats)']]],
+  ['ridecompleted',['RideCompleted',['../class_ride_completed.html#a6cdeccf0aea565f56f77459cc75847c4',1,'RideCompleted']]],
+  ['rideoffer',['RideOffer',['../class_ride_offer.html#ade002d578a8ee317d34c88d5b4b5e2d7',1,'RideOffer']]],
+  ['riderequest',['RideRequest',['../class_ride_request.html#a58874aa113243ac8e5e6a2bf68a96037',1,'RideRequest']]],
+  ['road',['Road',['../class_road.html#ab2d4cc8a9411ffb084af289e12d11c7b',1,'Road']]]
 ];

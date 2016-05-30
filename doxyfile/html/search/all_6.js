@@ -10,6 +10,7 @@ var searchData=
   ['getdeparturetolerance',['getDepartureTolerance',['../class_ride.html#a09d280e7b7be35d8c1957316b1fdfa53',1,'Ride']]],
   ['getdist',['getDist',['../class_crossroad.html#ae118c0ada6b191335a6e0f0fdce1e0d5',1,'Crossroad::getDist()'],['../class_road_map.html#a9970c4e809908d7a3784b23666ec5d10',1,'RoadMap::getDist()']]],
   ['getestimatedarrival',['getEstimatedArrival',['../class_ride.html#a498db4e46f6520b747a18156855ecd27',1,'Ride']]],
+  ['gethitchhikers',['getHitchhikers',['../class_ride.html#a0b7b285313e4f284a96b98b1565350bd',1,'Ride']]],
   ['getid',['getId',['../class_crossroad.html#a81e112365e77a43a729fd807538bd339',1,'Crossroad']]],
   ['getlatitudeindegrees',['getLatitudeInDegrees',['../class_crossroad.html#a089ec6f57ec1535c5382aa970542f0a7',1,'Crossroad']]],
   ['getlatitudeinradians',['getLatitudeInRadians',['../class_crossroad.html#a9dfa221519cd05a3562ebab44df7cedc',1,'Crossroad']]],
@@ -18,9 +19,12 @@ var searchData=
   ['getname',['getName',['../class_road.html#a7420713cc7c3c5197a5e14b53f1fc5bc',1,'Road::getName()'],['../class_user.html#ad253dd3bf9b1effaab72e36e13e1d152',1,'User::getName()']]],
   ['getnodeid',['getNodeId',['../class_road.html#afb61f123b83f3b5833112ce585dc66c6',1,'Road']]],
   ['getnoseats',['getNoSeats',['../class_ride.html#ac6ce2ae3098bf408b70ca71ecdfa1278',1,'Ride']]],
+  ['getrequests',['getRequests',['../class_ride_offer.html#a62e995e6e3cc7aaa074d2a9f69329212',1,'RideOffer']]],
+  ['getroadspassed',['getRoadsPassed',['../class_road_map.html#acecd13293d634caa11afba05ec496233',1,'RoadMap']]],
+  ['getroute',['getRoute',['../class_ride_offer.html#aa03bcf9a56b427b96ca09f55e26c5e9c',1,'RideOffer']]],
   ['getuserid',['getUserID',['../class_user.html#ada4589ad6179f55dcb35ab5afdab78f5',1,'User']]],
   ['getusers',['getUsers',['../class_app.html#a389988991bdbe0002c9df1245708c29e',1,'App']]],
   ['graph',['Graph',['../class_graph.html',1,'']]],
-  ['graph_3c_20crossroad_20_3e',['Graph&lt; Crossroad &gt;',['../class_graph.html',1,'']]],
+  ['graph_3c_20crossroad_2c_20road_20_3e',['Graph&lt; Crossroad, Road &gt;',['../class_graph.html',1,'']]],
   ['graphviewer',['GraphViewer',['../class_graph_viewer.html',1,'GraphViewer'],['../class_graph_viewer.html#a8adc614f4fc290a3efcec7d7ceb1c58a',1,'GraphViewer::GraphViewer(int width, int height, bool dynamic)'],['../class_graph_viewer.html#ad9d7b1d8b4ba8ef18517eae0e68568a2',1,'GraphViewer::GraphViewer(int width, int height, bool dynamic, int port_n)']]]
 ];

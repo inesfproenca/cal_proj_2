@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['decreasenoseats',['decreaseNoSeats',['../class_ride_offer.html#a145cf12bbda55809eb41740cbd45a6f5',1,'RideOffer']]],
   ['defineedgecolor',['defineEdgeColor',['../class_graph_viewer.html#a4102580b69826ba83251ef7bb262f8be',1,'GraphViewer']]],
   ['defineedgecurved',['defineEdgeCurved',['../class_graph_viewer.html#a08f362be0e682d91e7506dca8caae1b8',1,'GraphViewer']]],
   ['defineedgedashed',['defineEdgeDashed',['../class_graph_viewer.html#af785279b5c204df0e274b20c36276fc3',1,'GraphViewer']]],

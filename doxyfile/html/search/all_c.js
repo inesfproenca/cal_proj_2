@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['user',['User',['../class_user.html',1,'User'],['../class_user.html#a7d8f1de813351d98afcfe7f2daf41507',1,'User::User()']]]
+  ['trytomatchride',['tryToMatchRide',['../class_app.html#a7a0b847d3e002f9fefc38cca7474f4f9',1,'App']]]
 ];

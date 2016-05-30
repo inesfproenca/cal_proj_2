@@ -2,8 +2,7 @@
 \label{class_ride_offer}\index{Ride\+Offer@{Ride\+Offer}}
 
 
-Inheritance diagram for Ride\+Offer\+:
-\nopagebreak
+Inheritance diagram for Ride\+Offer\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Ride\+Offer\+:
 \end{figure}
 
 
-Collaboration diagram for Ride\+Offer\+:
-\nopagebreak
+Collaboration diagram for Ride\+Offer\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,28 +21,146 @@ Collaboration diagram for Ride\+Offer\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_ride_offer_ade002d578a8ee317d34c88d5b4b5e2d7}{}{\bfseries Ride\+Offer} (uint departure\+Place, uint arrival\+Place, time\+\_\+t departure\+Time, time\+\_\+t departure\+Tolerance, time\+\_\+t arrival\+Tolerance, int no\+Seats, \hyperlink{class_user}{User} $\ast$driver)\label{class_ride_offer_ade002d578a8ee317d34c88d5b4b5e2d7}
-
+\hyperlink{class_ride_offer_ade002d578a8ee317d34c88d5b4b5e2d7}{Ride\+Offer} (uint departure\+Place, uint arrival\+Place, time\+\_\+t departure\+Time, time\+\_\+t departure\+Tolerance, time\+\_\+t arrival\+Tolerance, int no\+Seats, \hyperlink{class_user}{User} $\ast$driver)
 \item 
-\hypertarget{class_ride_offer_a145cf12bbda55809eb41740cbd45a6f5}{}void {\bfseries decrease\+No\+Seats} (uint no\+Seats)\label{class_ride_offer_a145cf12bbda55809eb41740cbd45a6f5}
-
+virtual \hyperlink{class_ride_offer_a2d6af9fd7260933d7f082d046c9738d9}{$\sim$\+Ride\+Offer} ()
 \item 
-\hypertarget{class_ride_offer_a62e995e6e3cc7aaa074d2a9f69329212}{}const vector$<$ \hyperlink{class_ride_request}{Ride\+Request} $>$ \& {\bfseries get\+Requests} () const \label{class_ride_offer_a62e995e6e3cc7aaa074d2a9f69329212}
-
+void \hyperlink{class_ride_offer_a145cf12bbda55809eb41740cbd45a6f5}{decrease\+No\+Seats} (uint no\+Seats)
 \item 
-\hypertarget{class_ride_offer_aa03bcf9a56b427b96ca09f55e26c5e9c}{}const std\+::list$<$ unsigned int $>$ \& {\bfseries get\+Route} () const \label{class_ride_offer_aa03bcf9a56b427b96ca09f55e26c5e9c}
-
+const vector$<$ \hyperlink{class_ride_request}{Ride\+Request} $>$ \& \hyperlink{class_ride_offer_a62e995e6e3cc7aaa074d2a9f69329212}{get\+Requests} () const 
 \item 
-\hypertarget{class_ride_offer_a173345d8bc9af6b0d951f8202aab0fef}{}void {\bfseries set\+Route} (const std\+::list$<$ unsigned int $>$ \&route)\label{class_ride_offer_a173345d8bc9af6b0d951f8202aab0fef}
-
+const std\+::list$<$ unsigned int $>$ \& \hyperlink{class_ride_offer_aa03bcf9a56b427b96ca09f55e26c5e9c}{get\+Route} () const 
 \item 
-\hypertarget{class_ride_offer_a0dc50af57fdea2e2869e4414e7bb124c}{}void {\bfseries add\+Request} (\hyperlink{class_ride_request}{Ride\+Request} request)\label{class_ride_offer_a0dc50af57fdea2e2869e4414e7bb124c}
+void \hyperlink{class_ride_offer_a173345d8bc9af6b0d951f8202aab0fef}{set\+Route} (const std\+::list$<$ unsigned int $>$ \&route)
+\item 
+void \hyperlink{class_ride_offer_a0dc50af57fdea2e2869e4414e7bb124c}{add\+Request} (\hyperlink{class_ride_request}{Ride\+Request} request)
+\item 
+int \hyperlink{class_ride_offer_a5f0b73a8e3d8eeb7ada457108ad8e283}{find\+Destination\+In\+Path} (string dest)
+\item 
+int \hyperlink{class_ride_offer_a719a39a85051411efee4eff5878a94a2}{find\+Passenger} (string name)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& {\bfseries operator$<$$<$} (ostream \&os, const \hyperlink{class_ride_offer}{Ride\+Offer} \&offer)\hypertarget{class_ride_offer_a45d312450d0340c9527df5c0503bd9f3}{}\label{class_ride_offer_a45d312450d0340c9527df5c0503bd9f3}
 
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Constructor \& Destructor Documentation}
+\index{Ride\+Offer@{Ride\+Offer}!Ride\+Offer@{Ride\+Offer}}
+\index{Ride\+Offer@{Ride\+Offer}!Ride\+Offer@{Ride\+Offer}}
+\subsubsection[{\texorpdfstring{Ride\+Offer(uint departure\+Place, uint arrival\+Place, time\+\_\+t departure\+Time, time\+\_\+t departure\+Tolerance, time\+\_\+t arrival\+Tolerance, int no\+Seats, User $\ast$driver)}{RideOffer(uint departurePlace, uint arrivalPlace, time_t departureTime, time_t departureTolerance, time_t arrivalTolerance, int noSeats, User *driver)}}]{\setlength{\rightskip}{0pt plus 5cm}Ride\+Offer\+::\+Ride\+Offer (
+\begin{DoxyParamCaption}
+\item[{uint}]{departure\+Place, }
+\item[{uint}]{arrival\+Place, }
+\item[{time\+\_\+t}]{departure\+Time, }
+\item[{time\+\_\+t}]{departure\+Tolerance, }
+\item[{time\+\_\+t}]{arrival\+Tolerance, }
+\item[{int}]{no\+Seats, }
+\item[{{\bf User} $\ast$}]{driver}
+\end{DoxyParamCaption}
+)}\hypertarget{class_ride_offer_ade002d578a8ee317d34c88d5b4b5e2d7}{}\label{class_ride_offer_ade002d578a8ee317d34c88d5b4b5e2d7}
+Class base constructor \index{Ride\+Offer@{Ride\+Offer}!````~Ride\+Offer@{$\sim$\+Ride\+Offer}}
+\index{````~Ride\+Offer@{$\sim$\+Ride\+Offer}!Ride\+Offer@{Ride\+Offer}}
+\subsubsection[{\texorpdfstring{$\sim$\+Ride\+Offer()}{~RideOffer()}}]{\setlength{\rightskip}{0pt plus 5cm}Ride\+Offer\+::$\sim$\+Ride\+Offer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_ride_offer_a2d6af9fd7260933d7f082d046c9738d9}{}\label{class_ride_offer_a2d6af9fd7260933d7f082d046c9738d9}
+Class default destructor 
+
+\subsection{Member Function Documentation}
+\index{Ride\+Offer@{Ride\+Offer}!add\+Request@{add\+Request}}
+\index{add\+Request@{add\+Request}!Ride\+Offer@{Ride\+Offer}}
+\subsubsection[{\texorpdfstring{add\+Request(\+Ride\+Request request)}{addRequest(RideRequest request)}}]{\setlength{\rightskip}{0pt plus 5cm}void Ride\+Offer\+::add\+Request (
+\begin{DoxyParamCaption}
+\item[{{\bf Ride\+Request}}]{request}
+\end{DoxyParamCaption}
+)}\hypertarget{class_ride_offer_a0dc50af57fdea2e2869e4414e7bb124c}{}\label{class_ride_offer_a0dc50af57fdea2e2869e4414e7bb124c}
+Adds a ride request to the requests vector 
+\begin{DoxyParams}{Parameters}
+{\em request} & ride request to add to the vector \\
+\hline
+\end{DoxyParams}
+\index{Ride\+Offer@{Ride\+Offer}!decrease\+No\+Seats@{decrease\+No\+Seats}}
+\index{decrease\+No\+Seats@{decrease\+No\+Seats}!Ride\+Offer@{Ride\+Offer}}
+\subsubsection[{\texorpdfstring{decrease\+No\+Seats(uint no\+Seats)}{decreaseNoSeats(uint noSeats)}}]{\setlength{\rightskip}{0pt plus 5cm}void Ride\+Offer\+::decrease\+No\+Seats (
+\begin{DoxyParamCaption}
+\item[{uint}]{no\+Seats}
+\end{DoxyParamCaption}
+)}\hypertarget{class_ride_offer_a145cf12bbda55809eb41740cbd45a6f5}{}\label{class_ride_offer_a145cf12bbda55809eb41740cbd45a6f5}
+Decreases the number of seats by the given number 
+\begin{DoxyParams}{Parameters}
+{\em no\+Seats} & number of seats to remove \\
+\hline
+\end{DoxyParams}
+\index{Ride\+Offer@{Ride\+Offer}!find\+Destination\+In\+Path@{find\+Destination\+In\+Path}}
+\index{find\+Destination\+In\+Path@{find\+Destination\+In\+Path}!Ride\+Offer@{Ride\+Offer}}
+\subsubsection[{\texorpdfstring{find\+Destination\+In\+Path(string dest)}{findDestinationInPath(string dest)}}]{\setlength{\rightskip}{0pt plus 5cm}int Ride\+Offer\+::find\+Destination\+In\+Path (
+\begin{DoxyParamCaption}
+\item[{string}]{dest}
+\end{DoxyParamCaption}
+)}\hypertarget{class_ride_offer_a5f0b73a8e3d8eeb7ada457108ad8e283}{}\label{class_ride_offer_a5f0b73a8e3d8eeb7ada457108ad8e283}
+Looks for the destination string name (or an approximation) on the itinerary list 
+\begin{DoxyParams}{Parameters}
+{\em dest} & destination name string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the distance between the most similar string and the given string or -\/1 if it exceeds the tolerance 
+\end{DoxyReturn}
+\index{Ride\+Offer@{Ride\+Offer}!find\+Passenger@{find\+Passenger}}
+\index{find\+Passenger@{find\+Passenger}!Ride\+Offer@{Ride\+Offer}}
+\subsubsection[{\texorpdfstring{find\+Passenger(string name)}{findPassenger(string name)}}]{\setlength{\rightskip}{0pt plus 5cm}int Ride\+Offer\+::find\+Passenger (
+\begin{DoxyParamCaption}
+\item[{string}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_ride_offer_a719a39a85051411efee4eff5878a94a2}{}\label{class_ride_offer_a719a39a85051411efee4eff5878a94a2}
+Looks for the given name (or an approximation) on the list of people that will ride the vehicle (driver + hitchhikers) 
+\begin{DoxyParams}{Parameters}
+{\em name} & passenger name string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the distance between the most similar string and the given string or -\/1 if it exceeds the tolerance 
+\end{DoxyReturn}
+\index{Ride\+Offer@{Ride\+Offer}!get\+Requests@{get\+Requests}}
+\index{get\+Requests@{get\+Requests}!Ride\+Offer@{Ride\+Offer}}
+\subsubsection[{\texorpdfstring{get\+Requests() const }{getRequests() const }}]{\setlength{\rightskip}{0pt plus 5cm}const vector$<${\bf Ride\+Request}$>$\& Ride\+Offer\+::get\+Requests (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ride_offer_a62e995e6e3cc7aaa074d2a9f69329212}{}\label{class_ride_offer_a62e995e6e3cc7aaa074d2a9f69329212}
+\begin{DoxyReturn}{Returns}
+the requests vector 
+\end{DoxyReturn}
+\index{Ride\+Offer@{Ride\+Offer}!get\+Route@{get\+Route}}
+\index{get\+Route@{get\+Route}!Ride\+Offer@{Ride\+Offer}}
+\subsubsection[{\texorpdfstring{get\+Route() const }{getRoute() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::list$<$unsigned int$>$\& Ride\+Offer\+::get\+Route (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ride_offer_aa03bcf9a56b427b96ca09f55e26c5e9c}{}\label{class_ride_offer_aa03bcf9a56b427b96ca09f55e26c5e9c}
+\begin{DoxyReturn}{Returns}
+the route list 
+\end{DoxyReturn}
+\index{Ride\+Offer@{Ride\+Offer}!set\+Route@{set\+Route}}
+\index{set\+Route@{set\+Route}!Ride\+Offer@{Ride\+Offer}}
+\subsubsection[{\texorpdfstring{set\+Route(const std\+::list$<$ unsigned int $>$ \&route)}{setRoute(const std::list< unsigned int > &route)}}]{\setlength{\rightskip}{0pt plus 5cm}void Ride\+Offer\+::set\+Route (
+\begin{DoxyParamCaption}
+\item[{const std\+::list$<$ unsigned int $>$ \&}]{route}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ride_offer_a173345d8bc9af6b0d951f8202aab0fef}{}\label{class_ride_offer_a173345d8bc9af6b0d951f8202aab0fef}
+Sets the route to the given list 
+\begin{DoxyParams}{Parameters}
+{\em new} & route to set on the ride offer \\
+\hline
+\end{DoxyParams}
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Inês/workspace/cal\+\_\+proj\+\_\+1/src/Ride\+Offer.\+h\item 
-C\+:/\+Users/\+Inês/workspace/cal\+\_\+proj\+\_\+1/src/Ride\+Offer.\+cpp\end{DoxyCompactItemize}
+src/Ride\+Offer.\+h\item 
+src/Ride\+Offer.\+cpp\end{DoxyCompactItemize}
